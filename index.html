@@ -156,6 +156,88 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-NFS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/08/26/NFS/">NFS</a>
+    </h1>
+  
+
+        
+        <a href="/2021/08/26/NFS/" class="archive-article-date">
+  	<time datetime="2021-08-26T03:29:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>NFS (Network File System)是由Sun设计开发的网络文件系统，可以让用户可以像访问本地文件一样访问远程系统上共享的文件。目前总共有NFSv2/v3/v4三个大版本，其中v4又包含4.0、4.1和4.2三个次版本</p>
+<p>v2和v3这两个版本的设计理念相似，都采用了无状态(stateless)模型；而v4则采用了有状态(stateful)模型。</p>
+<h1 id="NFSv2"><a href="#NFSv2" class="headerlink" title="NFSv2"></a>NFSv2</h1><p>NFS设计之初，是为了解决异构网络环境(即由不同制造商生产的计算机、网络设备和系统组成的)文件便于共享的问题。NFSv2协议之规定了request和response的格式，而并没有规定必须的实现方式，因此非常的开放灵活。</p>
+<p>在早期的使用场景中，往往是单个NFS服务器为多个NFS客户端提供文件共享服务，当服务器不可用时，所有的客户端都会受到影响，因此NFSv2要求能简单快速地恢复。</p>
+<p>NFSv2采用了无状态模型，即服务端不维护任何客户端的相关信息，客户端发来的请求需要携带完成该操作所需的信息。之所以能做到无状态协议，有以下两个重要的前置条件：</p>
+<ol>
+<li>协议的所有接口都采用同步模型，确保客户端在RPC返回后不需要维护额外信息用于重试或者异步回调；</li>
+<li>设计的接口大多都是幂等的，比如lookup、read、getattr等，write操作在某些情况下也是幂等的；</li>
+</ol>
+<h1 id="NFSv3"><a href="#NFSv3" class="headerlink" title="NFSv3"></a>NFSv3</h1><h1 id="NFSv4"><a href="#NFSv4" class="headerlink" title="NFSv4"></a>NFSv4</h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">文件系统 网络文件系统</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/08/26/NFS/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2-HBase源码分析-目录结构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -837,82 +919,10 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-Unicode与UTF-8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/21/Unicode%E4%B8%8EUTF-8/">Unicode与UTF-8</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/21/Unicode%E4%B8%8EUTF-8/" class="archive-article-date">
-  	<time datetime="2017-10-21T11:31:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>简单来说，<br><strong>Unicode</strong>：是ISO组织提出的UCS（Universal Multiple-Octet Coded Character Set），为所有字母和符号编码的字符集，即为每一个字符分配一个唯一的“ID”（学名码位，Code point）；<br><strong>UTF-8</strong>：为解决Unicode在网络上传输的问题，面向传输的众多UTF（UCS Transfer Format）标准出现了，它是一种编码规则，每次传输8个位数据。
-        
-          <a class="article-more-a" href="/2017/10/21/Unicode%E4%B8%8EUTF-8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/21/Unicode%E4%B8%8EUTF-8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
@@ -1023,6 +1033,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">分布式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">文件系统 网络文件系统</a>
               </li>
             
             <div class="clearfix"></div>
